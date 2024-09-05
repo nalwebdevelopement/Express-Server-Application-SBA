@@ -1,23 +1,33 @@
-const express = require('express')
+//const express = require('express')
+import express from 'express'
+import order from  './routes/order.js'
+import logger from './middleware/logger.js'
+import errorHandler from './middleware/error.js'
 const app = express()
 const PORT = 3000
 
+
+app.set('view engine', 'ejs')
+app.use(express.static('public'));
+
+//body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+// logger middleware
+app.use(logger)
+app.use('/api/orders',order)
+
+// Error Handler
+
+app.use(errorHandler);  
+
+
+
+
 app.get('/',(req,res)=>{
-    res.send("Welcome Home")
+     res.render('homepage')
 })
-
-
-let orders = [
-        {custid:1,productid: 1001,prodname:'cell phone', Quantity: 1},
-        {custid:2,productid: 1002,prodname:'pencil', Quantity: 10},
-        {custid:3,productid: 91001,prodname:'Dining Table', Quantity: 1},
-    ];
-
-app.get('/api/orders',(req,res)=>
-{
-    res.json(orders);
-});
-
 app.listen(PORT,()=>{
     console.log(`Server is now Running...${PORT}`)
 })

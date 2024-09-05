@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css" >
+    </head>
+    <body>
+        <h1> Curb Side online Management - Track orders - </h1>
+        <hr>
+        <a href = "/"> Home page </a> 
+        <a href = "/api/orders"> orders</a>
+
+        <h1>Curbside Pickup</h1>
+    
+        <section>
+            <h2>Create Order</h2>
+            <form id="order-form">
+                <label for="customer_id">Customer ID:</label>
+                <input type="text" id="customer_id" name="customer_id" required>
+                
+                <label for="items">Order Items (JSON):</label>
+                <textarea id="items" name="items" rows="4" required></textarea>
+                
+                <label for="pickup_time">Pickup Time:</label>
+                <input type="datetime-local" id="pickup_time" name="pickup_time" required>
+                
+                <button type="submit">Create Order</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Get Order Details</h2>
+            <input type="text" id="order_id" placeholder="Order ID">
+            <button id="get-order-details">Get Details</button>
+            <div id="order-details"></div>
+        </section>
+        
+        <section>
+            <h2>Update Order Status</h2>
+            <input type="text" id="update_order_id" placeholder="Order ID">
+            <select id="status">
+                <option value="prepared">Prepared</option>
+                <option value="ready">Ready</option>
+                <option value="picked_up">Picked Up</option>
+            </select>
+            <button id="update-status">Update Status</button>
+        </section>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>
