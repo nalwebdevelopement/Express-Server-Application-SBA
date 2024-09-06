@@ -11,6 +11,8 @@ router.post('/',createpost)
 router.put('/:id',updatepost)
 router.delete('/:id',deletepost)
 
+export default router;
+
 // router.get('/',(req,res)=>{
 //     //res.send("Welcome Home")
 //     res.json(orders);
@@ -107,4 +109,3 @@ router.delete('/:id',deletepost)
 
 
 
- export default router;

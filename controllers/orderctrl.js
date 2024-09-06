@@ -1,7 +1,7 @@
 //@desc Get all posts
 //@route GET /api/orders
 
-let orders = [
+export const orders = [
     {id:1,productid: 1001,prodname:'cell phone', Quantity: 1},
     {id:2,productid: 1002,prodname:'pencil', Quantity: 10},
     {id:3,productid: 91001,prodname:'Dining Table', Quantity: 1},
@@ -99,3 +99,5 @@ export const deletepost = (req,res) =>
        res.status(200).json(orders)
     }
 
+
+// export default orders;

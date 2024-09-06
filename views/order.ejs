@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders List</title>
+    <style>
+        li {
+            color: orange;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #fff8e1;
+            border: 1px solid #ffd27f;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            color: #ff6600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        li strong {
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #999;
+            font-size: 18px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <h1>Orders List</h1>
+    <% if (orders.length > 0) { %>
+        <ul>
+            <% orders.forEach(order => { %>
+                <li>
+                    <strong>Order ID:</strong> <%= order.id %> <br>
+                    <strong>Product ID:</strong> <%= order.productid %> <br>
+                    <strong>Product Name:</strong> <%= order.prodname %> <br>
+                    <strong>Quantity:</strong> <%= order.Quantity %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No orders found.</p>
+    <% } %>
+</body>
+</html>

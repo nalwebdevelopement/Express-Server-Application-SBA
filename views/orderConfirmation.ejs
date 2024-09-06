@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+</head>
+<body>
+    <h1>Order Confirmation</h1>
+    <p>Thank you for your order!</p>
+    <ul>
+        <li><strong>Product ID:</strong> <%= order.productid %></li>
+        <li><strong>Product Name:</strong> <%= order.prodname %></li>
+        <li><strong>Quantity:</strong> <%= order.Quantity %></li>
+    </ul>
+    <a href="/orders/form">Submit another order</a>
+</body>
+</html>

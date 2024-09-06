@@ -1,4 +1,140 @@
 body
 {
-    background-color: chocolate;
+    background-color: rgb(234, 162, 111);
 }
+.navbar
+{
+    display:flex;
+    justify-content: space-evenly;
+    /* background-color: #e1251b; */
+    background: linear-gradient(to bottom, #e052a0,#f15c41);
+    align-items: center;
+    height: 10vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+
+button{
+    
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    cursor: pointer;
+    background-image: linear-gradient(to right,#e052a0,#f15c41)!important;
+    border-radius: 3px;
+    padding: 16px 18px 15px;
+    white-space: nowrap;
+
+    :hover {
+        background-color: #e6375a;
+        background-image: none!important;
+    }
+    
+}
+#order_id ,#update_order_id,#status{
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #e052a0;
+    border-radius: 5px;
+    background-color: #f15c41;
+    color: white;
+    font-size: 16px;
+    outline: none;
+  }
+
+ 
+
+.topbar
+{
+    display: flex;
+    justify-content: center;
+}
+img
+{
+    border-radius: 50px;
+}
+/*  */
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="number"],
+  input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #e052a0;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #333;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* input[type="number"]::placeholder,
+  input[type="text"]::placeholder {
+    color: #e052a0;
+    opacity: 0.8;
+  } */
+  
+  button {
+    background-color: #e052a0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f15c41;
+  }
+  form {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    background-color: #f15c41;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .social-media {
+    margin-top: 10px;
+  }
+  
+  .social-media a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #e052a0; /* Change this to any color you prefer */
+  }
